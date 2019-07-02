@@ -1,0 +1,21 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    <title>Rango</title>
+{% endblock %}
+
+
+{% block body_block %}
+    <h1>Rango says...</h1>
+    <div>
+        here is the about page! <br />
+        <strong>{{ boldmessage }}</strong><br />
+    </div>
+    <div>
+        <a href="/rango/">Index</a><br />
+        <img src="{{ MEDIA_URL}}download.jpeg" 
+             alt="Picture of Rango" /> <!-- New line -->
+    </div>
+    <p> visits: {{ visits }}</p>
+{% endblock %}

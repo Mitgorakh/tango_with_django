@@ -1,0 +1,18 @@
+{% extends "rango/base.html" %}
+{% block body_block %}
+<h2 class="form-signin-heading">Profile Registration</h2>
+<form role="form" method="post" action="." enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ profile_form.as_p }}
+<!--    <div class="form-group" >
+        <p class="required"><label for="id_website">Website:</label>
+        <input class="form-control" id="id_website" name="website" type="url" />
+        </p>
+        <p><label for="id_picture">
+        <image id="profileImage" src="" />
+        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" capture>
+        </p>
+</div>-->
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+{% endblock %}
